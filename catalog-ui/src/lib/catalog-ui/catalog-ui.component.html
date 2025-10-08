@@ -1,0 +1,21 @@
+<section class="catalog">
+    <h2>Catalog</h2>
+  
+    <input
+      type="text"
+      [ngModel]="query()"
+      (ngModelChange)="onSearch($event)"
+      placeholder="Search…"
+    />
+  
+    @if (facade.loading()) {
+        <p>Loading…</p>
+    }
+  
+    <ul>
+        @for (item of facade.items(); track item.id) {
+            <li>{{ item.name }}</li>
+        }
+    </ul>
+  </section>
+  

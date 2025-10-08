@@ -1,0 +1,12 @@
+<label class="theme-toggle">
+    <span>Theme:</span>
+    <select [value]="current()" (change)="changeTheme($any($event.target).value)">
+        @for (mode of modes; track mode) {
+            <option [value]="mode">
+                {{ mode | titlecase }}
+            </option>
+        }
+    </select>
+</label>
+
+<router-outlet></router-outlet>

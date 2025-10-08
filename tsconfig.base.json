@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ai-workspace/catalog-application": ["catalog-application/src/index.ts"],
+      "@ai-workspace/catalog-domain": ["catalog-domain/src/index.ts"],
+      "@ai-workspace/catalog-infrastructure": [
+        "catalog-infrastructure/src/index.ts"
+      ],
+      "@ai-workspace/catalog-ui": ["catalog-ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

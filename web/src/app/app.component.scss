@@ -1,0 +1,13 @@
+:host {
+    position: relative;
+
+    .theme-toggle {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    
+        span {
+            margin-right: 0.5rem;
+        }
+    }
+}

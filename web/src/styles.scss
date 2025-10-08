@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */  
+  /* Auto-detect: if device is dark, prefer dark tokens */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0f14;
+      --bg-elev: #111827;
+      --text: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border: #1f2937;
+      --primary: #60a5fa;
+      --primary-contrast: #0b0f14;
+      --link: #93c5fd;
+    }
+  }
+  
+  /* Manual override: force light */
+  html.light {
+    color-scheme: light;
+    --bg: #ffffff;
+    --bg-elev: #f6f7f9;
+    --text: #111318;
+    --text-muted: #4a4f5a;
+    --border: #e5e7eb;
+    --primary: #2563eb;
+    --primary-contrast: #ffffff;
+    --link: #1d4ed8;
+  }
+  
+  /* Manual override: force dark */
+  html.dark {
+    color-scheme: dark;
+    --bg: #0b0f14;
+    --bg-elev: #111827;
+    --text: #e5e7eb;
+    --text-muted: #9ca3af;
+    --border: #1f2937;
+    --primary: #60a5fa;
+    --primary-contrast: #0b0f14;
+    --link: #93c5fd;
+  }
+  
+  /* ====== BASE STYLES ====== */
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+  
+  hr { border: 0; border-top: 1px solid var(--border); }
+  
+  .container {
+    margin: 0 auto;
+    padding: 1.25rem;
+    max-width: 960px;
+  }
+  
+  /* Example primitives */
+  .card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 1.125rem;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    font-weight: 600;
+    background: var(--primary);
+    color: var(--primary-contrast);
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  .btn:focus { outline: 2px solid var(--link); outline-offset: 2px; }
+  .btn.ghost {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+  }
+  
+  /* Inputs adopt color-scheme, borders, and bg */
+  input, textarea, select {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.75rem;
+  }
+  
+  /* Optional: scrollbar that adapts to theme (WebKit) */
+  *::-webkit-scrollbar { width: 12px; height: 12px; }
+  *::-webkit-scrollbar-track { background: var(--bg); }
+  *::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--text) 20%, transparent);
+    border-radius: 10px;
+    border: 3px solid var(--bg);
+  }
+  
+
+body {
+    font-family: "Gill Sans", sans-serif;
+}

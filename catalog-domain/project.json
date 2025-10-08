@@ -1,0 +1,28 @@
+{
+  "name": "catalog-domain",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "catalog-domain/src",
+  "projectType": "library",
+  "tags": ["scope:catalog", "type:domain"],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/catalog-domain",
+        "main": "catalog-domain/src/index.ts",
+        "tsConfig": "catalog-domain/tsconfig.lib.json",
+        "assets": ["catalog-domain/*.md"],
+        "format": ["cjs"],
+        "generatePackageJson": true
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "catalog-domain/jest.config.ts"
+      }
+    }
+  }
+}
