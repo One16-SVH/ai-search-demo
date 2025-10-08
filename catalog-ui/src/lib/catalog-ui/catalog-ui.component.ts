@@ -17,5 +17,4 @@ export class CatalogUiComponent {
   onSearch(query: string) {
     this.facade.search(query);
   }
-  
 }

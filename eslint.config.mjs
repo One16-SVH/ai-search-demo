@@ -19,11 +19,8 @@ export default [
             { sourceTag: 'type:domain', onlyDependOnLibsWithTags: ['type:domain'] },
             { sourceTag: 'type:application', onlyDependOnLibsWithTags: ['type:domain','type:application'] },
             { sourceTag: 'type:infrastructure', onlyDependOnLibsWithTags: ['type:domain','type:application','type:infrastructure'] },
-            { sourceTag: 'type:ui', onlyDependOnLibsWithTags: ['type:application','type:ui'] },
-/*             {
-              sourceTag: '*',
-              onlyDependOnLibsWithTags: ['*'],
-            }, */
+            { sourceTag: 'type:ui', onlyDependOnLibsWithTags: ['type:application','type:ui', 'type:domain'] },
+            { sourceTag: 'type:app', onlyDependOnLibsWithTags: ['type:domain','type:application','type:infrastructure','type:ui'] }
           ],
         },
       ],

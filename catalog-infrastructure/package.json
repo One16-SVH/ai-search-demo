@@ -5,5 +5,8 @@
   "type": "commonjs",
   "main": "./index.cjs",
   "types": "./index.d.ts",
-  "dependencies": {}
+  "dependencies": {
+    "fuse.js": "^7.0.0",
+    "@ai-workspace/catalog-domain": "*"
+  }
 }
